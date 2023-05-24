@@ -36,3 +36,12 @@ python main.py
 python main.py -d 3 -c CZK
 
 ```
+
+## Залежності
+
+```
+[packages]
+aiofile = "*"
+aiohttp = "*"
+prettytable = "*"
+```
