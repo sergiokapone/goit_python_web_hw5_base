@@ -1,9 +1,12 @@
+from datetime import datetime, timedelta
+import argparse
+
 from aiofile import async_open
 import aiohttp
 import asyncio
-from datetime import datetime, timedelta
+
 from prettytable import PrettyTable
-import argparse
+
 
 
 BASE_URL = "https://api.privatbank.ua/p24api/exchange_rates"
@@ -13,7 +16,7 @@ async def fetch_exchange_rate(currencies, date):
     async with aiohttp.ClientSession() as session:
         date = date.strftime("%d.%m.%Y")
         url = f"{BASE_URL}?json&date={date}"
-        headers = {"Accept": "application/json"}  # Указываем заголовок Accept
+        headers = {"Accept": "application/json"}
 
         async with session.get(url, headers=headers) as response:
             try:
@@ -50,6 +53,8 @@ async def fetch_exchange_rates(currencies, days):
 
 async def main(currencies, num_of_days):
 
+    currencies_str = ", ".join(currencies)
+
     if num_of_days > 10:
         print("Максимальна кількість днів має бути 10.")
         return {}
@@ -57,7 +62,7 @@ async def main(currencies, num_of_days):
     exchange_rates = await fetch_exchange_rates(currencies, num_of_days)
 
     async with async_open("log.txt", mode="a") as log_file:
-        await log_file.write(f"exchange {num_of_days}\n")
+        await log_file.write(f"Currencise: {currencies_str}.\nExchange date: {datetime.now()}\n")
 
     return exchange_rates
 

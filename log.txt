@@ -1,2 +1,4 @@
-exchange 1
-exchange 1
+Currencise: CZK.
+Exchange date: 2023-05-24 19:55:58.102915
+Currencise: CZK.
+Exchange date: 2023-05-24 19:56:13.588990
