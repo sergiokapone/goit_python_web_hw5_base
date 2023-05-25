@@ -2,3 +2,9 @@ Currencise: CZK.
 Exchange date: 2023-05-24 19:55:58.102915
 Currencise: CZK.
 Exchange date: 2023-05-24 19:56:13.588990
+Currencise: USD, EUR.
+Exchange date: 2023-05-25 13:13:35.695969
+Currencise: USD, EUR.
+Exchange date: 2023-05-25 13:13:45.701893
+Currencise: USD, EUR.
+Exchange date: 2023-05-25 13:14:46.407448

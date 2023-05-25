@@ -39,7 +39,7 @@ python main.py -d 3 -c CZK
 
 ## Залежності
 
-```
+```bash
 [packages]
 aiofile = "*"
 aiohttp = "*"
